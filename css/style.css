@@ -253,7 +253,7 @@ body {
 }
 
 .painting-caption .p-title {
-  font-size: 9.5px;
+  font-size: 14px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   line-height: 1.7;
@@ -261,9 +261,8 @@ body {
 
 .painting-caption .p-size,
 .painting-caption .p-price {
-  font-size: 9.5px;
+  font-size: 12px;
   letter-spacing: 0.1em;
-  color: #555;
   line-height: 1.7;
 }
 

@@ -189,6 +189,20 @@ body {
   padding: 18px 0 28px;
 }
 
+.breadcrumb-link {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.55;
+  transition: opacity 0.2s;
+}
+
+.breadcrumb-link:hover { opacity: 1; }
+
+.breadcrumb-bullet {
+  margin: 0 0.4em;
+  opacity: 0.4;
+}
+
 /* Wide 2-up rows */
 .wide-row {
   display: grid;

@@ -49,7 +49,7 @@ body {
   /* the PNG has a near-white bg — render as-is on white page */
 }
 
-/* Two rules + "ABOUT THE ARTIST" between them */
+/* Rule below logo */
 .home-rules {
   position: relative;
   margin-top: -24px; /* pull up so logo overlaps slightly */
@@ -62,26 +62,6 @@ body {
   background: var(--rule);
   border: none;
 }
-
-.home-about-row {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 7px 5% 7px 0;
-}
-
-.home-about-row a {
-  font-size: 11px;
-  font-weight: 300;
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  color: var(--nav-gray);
-  text-decoration: none;
-  opacity: 0.8;
-  transition: opacity 0.2s;
-}
-
-.home-about-row a:hover { opacity: 1; }
 
 /* Full-width painting */
 .home-painting {

@@ -27,6 +27,48 @@ body {
    HOME PAGE
 ════════════════════════════════════ */
 
+/* Header: white area with logo upper-right, rule below */
+.home-header {
+  width: 100%;
+  background: var(--white);
+  padding-top: 32px;
+  border-bottom: 3px solid var(--rule);
+  margin-bottom:10px;
+}
+
+.home-header-logo {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5%;
+}
+
+.home-header-logo img {
+  width: clamp(320px, 52vw, 760px);
+  height: auto;
+  opacity: 1;
+}
+
+.home-about-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 5% 14px 0;
+  margin-top: -18px;
+}
+
+.home-about-row a {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--nav-gray);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.home-about-row a:hover { opacity: 1; }
+
 /* Full-width painting */
 .home-painting {
   width: 100%;
@@ -40,6 +82,36 @@ body {
   object-fit: cover;
   object-position: center 20%;
   display: block;
+}
+
+/* Bottom nav */
+.home-footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 22px 5%;
+  border-top: 3px solid var(--rule);
+}
+
+.home-footer-nav a {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--nav-gray);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.home-footer-nav a:hover { opacity: 0.6; }
+
+.home-footer-nav .bullet {
+  color: var(--nav-gray);
+  font-size: 10px;
+  opacity: 0.6;
+  flex-shrink: 0;
 }
 
 /* ════════════════════════════════════
@@ -309,6 +381,10 @@ body {
 ════════════════════════════════════ */
 
 @media (max-width: 900px) {
+  .home-header-logo { padding-right: 3%; }
+  .home-about-row { padding-right: 3%; }
+  .home-footer-nav { padding: 22px 3%; }
+
   .home-painting img {
     height: clamp(220px, 56vw, 500px);
   }
@@ -334,6 +410,31 @@ body {
 }
 
 @media (max-width: 600px) {
+  .home-header-logo {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .home-header-logo img {
+    width: 85vw;
+  }
+
+  .home-about-row {
+    justify-content: center;
+    padding-right: 0;
+    margin-top: 0;
+  }
+
+  .home-footer-nav {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 22px 24px;
+    margin-top:10px;
+  }
+
+  .home-footer-nav .bullet { display: none; }
+
   .site-nav .nav-links {
     gap: 0;
   }

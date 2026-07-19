@@ -11,6 +11,7 @@
   --nav-gray: #3f3f3f;
   --rule: #cccccc;
   --caption-dark: #050003;
+  --tan: #ababab;
 }
 
 html { font-size: 16px; }
@@ -57,6 +58,7 @@ body {
 }
 
 .home-about-row a {
+  display: inline-block;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.5em;
@@ -65,6 +67,7 @@ body {
   text-decoration: none;
   opacity: 0.8;
   transition: opacity 0.2s;
+  transform: scaleX(1.5);
 }
 
 .home-about-row a:hover { opacity: 1; }
@@ -179,12 +182,13 @@ body {
 
 .section-title {
   text-align: center;
-  font-size: 11px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 400;
   letter-spacing: 0.7em;
   text-transform: uppercase;
-  color: #242323;
+  color: var(--tan);
   padding: 18px 0 28px;
+  transform: scaleX(1.5);
 }
 
 .breadcrumb-link {
@@ -204,6 +208,43 @@ body {
 /* ════════════════════════════════════
    ABOUT PAGE
 ════════════════════════════════════ */
+
+.about-page .section-title {
+  text-align: left;
+  transform-origin: left;
+  padding: 24px 0 28px 40px;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  max-width: 960px;
+  margin: 0 auto 32px;
+}
+
+.about-headshot {
+  flex: 0 0 150px;
+  width: 150px;
+  border: 1px solid var(--rule);
+  padding: 4px;
+}
+
+.about-headshot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-signature {
+  height: 110px;
+  width: auto;
+  opacity: 0.75;
+}
+
+.about-page .about-content {
+  max-width: 960px;
+}
 
 .about-content {
   max-width: 720px;
@@ -237,6 +278,68 @@ body {
 
 .about-content a:hover { opacity: 0.65; }
 
+.about-photos-intro {
+  max-width: 960px;
+  margin: 32px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--caption-dark);
+}
+
+.about-photos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin: 20px auto 0;
+  max-width: 960px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.about-photo img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 240px;
+  margin: 0 auto;
+}
+
+.about-photo-caption {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--caption-dark);
+  margin-top: 10px;
+}
+
+.about-photo-caption em { font-style: italic; }
+
+@media (max-width: 700px) {
+  .about-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-signature {
+    height: auto;
+    width: 220px;
+  }
+
+  .about-photos {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .about-photo img {
+    max-height: none;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
 /* ════════════════════════════════════
    COMMISSIONS PAGE
 ════════════════════════════════════ */
@@ -246,12 +349,15 @@ body {
 }
 
 .commissions-heading {
-  font-size: 12px;
+  font-size:20px;
   font-weight: 400;
   letter-spacing: 0.7em;
   text-transform: uppercase;
-  color: #242323;
+  color: var(--tan);
   margin: 12px 0 40px;
+  display: inline-block;
+  transform: scaleX(1.5);
+  transform-origin: left;
 }
 
 .commissions-layout {
@@ -276,15 +382,17 @@ body {
 }
 
 .commission-thumb {
-  flex: 0 0 150px;
-  width: 150px;
+  flex: 0 0 220px;
+  width: 220px;
+  height: 220px;
   display: block;
   overflow: hidden;
 }
 
 .commission-thumb img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   transition: transform 0.5s ease;
 }
@@ -360,7 +468,8 @@ body {
 
   .commission-thumb {
     flex: 0 0 auto;
-    width: 200px;
+    width: 220px;
+    height: 220px;
   }
 
   .commission-signature { text-align: center; }

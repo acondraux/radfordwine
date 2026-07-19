@@ -11,6 +11,7 @@
   --nav-gray: #3f3f3f;
   --rule: #cccccc;
   --caption-dark: #050003;
+  --tan: #ababab;
 }
 
 html { font-size: 16px; }
@@ -181,11 +182,11 @@ body {
 
 .section-title {
   text-align: center;
-  font-size: 11px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 400;
   letter-spacing: 0.7em;
   text-transform: uppercase;
-  color: #242323;
+  color: var(--tan);
   padding: 18px 0 28px;
   transform: scaleX(1.5);
 }
@@ -348,11 +349,11 @@ body {
 }
 
 .commissions-heading {
-  font-size: 12px;
+  font-size:20px;
   font-weight: 400;
   letter-spacing: 0.7em;
   text-transform: uppercase;
-  color: #242323;
+  color: var(--tan);
   margin: 12px 0 40px;
   display: inline-block;
   transform: scaleX(1.5);

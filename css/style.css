@@ -208,6 +208,43 @@ body {
    ABOUT PAGE
 ════════════════════════════════════ */
 
+.about-page .section-title {
+  text-align: left;
+  transform-origin: left;
+  padding: 24px 0 28px;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  max-width: 960px;
+  margin: 0 auto 32px;
+}
+
+.about-headshot {
+  flex: 0 0 150px;
+  width: 150px;
+  border: 1px solid var(--rule);
+  padding: 4px;
+}
+
+.about-headshot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-signature {
+  height: 110px;
+  width: auto;
+  opacity: 0.75;
+}
+
+.about-page .about-content {
+  max-width: 960px;
+}
+
 .about-content {
   max-width: 720px;
   margin: 0 auto;
@@ -240,12 +277,24 @@ body {
 
 .about-content a:hover { opacity: 0.65; }
 
+.about-photos-intro {
+  max-width: 960px;
+  margin: 32px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--caption-dark);
+}
+
 .about-photos {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
-  margin: 40px auto 0;
+  margin: 20px auto 0;
   max-width: 960px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
 }
 
 .about-photo img {
@@ -267,6 +316,16 @@ body {
 .about-photo-caption em { font-style: italic; }
 
 @media (max-width: 700px) {
+  .about-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-signature {
+    height: auto;
+    width: 220px;
+  }
+
   .about-photos {
     grid-template-columns: 1fr;
     justify-items: center;

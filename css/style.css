@@ -237,43 +237,135 @@ body {
 
 .about-content a:hover { opacity: 0.65; }
 
-/* Commission feature: image beside intro paragraph */
-.commission-feature {
+/* ════════════════════════════════════
+   COMMISSIONS PAGE
+════════════════════════════════════ */
+
+.commissions-page {
+  position: relative;
+}
+
+.commissions-heading {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.7em;
+  text-transform: uppercase;
+  color: #242323;
+  margin: 12px 0 40px;
+}
+
+.commissions-layout {
+  position: relative;
+}
+
+.commission-list {
   display: flex;
-  gap: 36px;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.commission-item {
+  display: flex;
+  gap: 26px;
   align-items: flex-start;
-  margin-bottom: 1.6em;
 }
 
-.commission-feature-image {
-  flex: 0 0 240px;
+.commission-thumb {
+  flex: 0 0 150px;
+  width: 150px;
+  display: block;
+  overflow: hidden;
 }
 
-.commission-feature-image img {
+.commission-thumb img {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.5s ease;
 }
 
-.commission-feature-text {
+.commission-thumb:hover img { transform: scale(1.04); }
+
+.commission-text {
   flex: 1;
+  padding-top: 4px;
 }
 
-.commission-feature-text p {
-  margin-bottom: 0;
+.commission-title {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+.commission-meta {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--nav-gray);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.commission-quote {
+  font-size: 12px;
+  line-height: 1.75;
+  color: var(--caption-dark);
+  margin-bottom: 10px;
+}
+
+.commission-signature {
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+}
+
+.commissions-watermark {
+  position: absolute;
+  top: -110px;
+  right: 0;
+  width: 2200px;
+  height: 110px;
+  transform-origin: bottom right;
+  transform: rotate(-90deg);
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.commissions-watermark img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  opacity: 0.12;
+  display: block;
+}
+
+.commissions-cta {
+  margin-top: 48px;
+}
+
+@media (max-width: 900px) {
+  .commissions-watermark { display: none; }
 }
 
 @media (max-width: 700px) {
-  .commission-feature {
+  .commission-item {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .commission-feature-image {
+  .commission-thumb {
     flex: 0 0 auto;
     width: 200px;
   }
+
+  .commission-signature { text-align: center; }
 }
 
 /* Wide 2-up rows */

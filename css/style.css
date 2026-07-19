@@ -240,6 +240,46 @@ body {
 
 .about-content a:hover { opacity: 0.65; }
 
+.about-photos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin: 40px auto 0;
+  max-width: 960px;
+}
+
+.about-photo img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 240px;
+  margin: 0 auto;
+}
+
+.about-photo-caption {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--caption-dark);
+  margin-top: 10px;
+}
+
+.about-photo-caption em { font-style: italic; }
+
+@media (max-width: 700px) {
+  .about-photos {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .about-photo img {
+    max-height: none;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
 /* ════════════════════════════════════
    COMMISSIONS PAGE
 ════════════════════════════════════ */

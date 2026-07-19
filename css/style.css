@@ -212,7 +212,7 @@ body {
 .about-page .section-title {
   text-align: left;
   transform-origin: left;
-  padding: 24px 0 28px;
+  padding: 24px 0 28px 40px;
 }
 
 .about-header {

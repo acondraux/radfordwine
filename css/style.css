@@ -28,6 +28,14 @@ body {
    HOME PAGE
 ════════════════════════════════════ */
 
+/* Home page stacks as a full-height column so the painting can flex to
+   fill the space between the header and footer and show in full. */
+.home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 /* Header: white area with logo upper-right, rule below */
 .home-header {
   width: 100%;
@@ -35,6 +43,7 @@ body {
   padding-top: 32px;
   border-bottom: 3px solid var(--rule);
   margin-bottom:10px;
+  flex: 0 0 auto;
 }
 
 .home-header-logo {
@@ -72,18 +81,23 @@ body {
 
 .home-about-row a:hover { opacity: 1; }
 
-/* Full-width painting */
+/* Full-width painting — flexes to fill the remaining height and shows
+   the whole image (contained, never cropped). */
 .home-painting {
   width: 100%;
-  display: block;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 0;
+  padding: 20px 0;
 }
 
 .home-painting img {
   width: 100%;
-  height: clamp(320px, 48vw, 680px);
-  object-fit: cover;
-  object-position: center 20%;
+  height: 100%;
+  object-fit: contain;
   display: block;
 }
 

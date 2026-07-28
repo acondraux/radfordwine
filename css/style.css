@@ -60,7 +60,7 @@ body {
 .home-about-row a {
   display: inline-block;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.5em;
   text-transform: uppercase;
   color: var(--nav-gray);
@@ -99,7 +99,7 @@ body {
 
 .home-footer-nav a {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.5em;
   text-transform: uppercase;
   color: var(--nav-gray);
@@ -127,7 +127,6 @@ body {
   align-items: center;
   justify-content: center;
   padding: 16px 24px;
-  border-bottom: 1px solid var(--rule);
 }
 
 .site-nav .nav-links {
@@ -155,7 +154,7 @@ body {
 .site-nav .nav-links li a:hover { opacity: 0.65; }
 
 .site-nav .nav-links li + li {
-  border-left: 1px solid var(--rule);
+  /*border-left: 1px solid var(--rule);*/
 }
 
 /* ════════════════════════════════════
@@ -241,7 +240,7 @@ body {
 /* Toggle matches the footer links (gray) */
 .home-footer-nav .nav-dropdown-toggle {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.5em;
   text-transform: uppercase;
   color: var(--nav-gray);
@@ -566,8 +565,7 @@ body {
 .thumb-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 16px;
+  gap: 0px 20px;
 }
 
 /* Category index grid — 3-col, square-cropped images */
@@ -638,7 +636,7 @@ body {
 .painting-caption .p-price {
   font-size: 12px;
   letter-spacing: 0.1em;
-  line-height: 1.7;
+  line-height: 1;
 }
 
 /* Flourish */

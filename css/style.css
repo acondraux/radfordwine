@@ -663,10 +663,6 @@ body {
   .home-about-row { padding-right: 3%; }
   .home-footer-nav { padding: 22px 3%; }
 
-  .home-painting img {
-    height: clamp(220px, 56vw, 500px);
-  }
-
   .art-page { padding: 0 20px; }
 
   .wide-row {

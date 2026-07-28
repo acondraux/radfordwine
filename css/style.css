@@ -159,6 +159,99 @@ body {
 }
 
 /* ════════════════════════════════════
+   NAV DROPDOWN — "The Art"
+════════════════════════════════════ */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  cursor: pointer;
+  outline: none;
+}
+
+/* Toggle matches the surrounding menu links (blue in the art-page nav) */
+.site-nav .nav-links li .nav-dropdown-toggle {
+  display: block;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.6em;
+  text-transform: uppercase;
+  color: var(--nav-blue);
+  padding: 4px 20px;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.site-nav .nav-links li .nav-dropdown-toggle:hover { opacity: 0.65; }
+
+/* Dropdown panel */
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  min-width: 210px;
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.09);
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Footer variant: opens upward, since it sits in the footer */
+.nav-dropdown-up .nav-dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  transform: translateX(-50%) translateY(-6px);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Stacked menu items keep the menu's contextual link color
+   (blue in the art-page nav, gray in the home footer) */
+.site-nav .nav-dropdown-menu li + li,
+.home-footer-nav .nav-dropdown-menu li + li {
+  border-left: none;
+}
+
+.site-nav .nav-dropdown-menu li a,
+.home-footer-nav .nav-dropdown-menu li a {
+  display: block;
+  padding: 9px 24px;
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Toggle matches the footer links (gray) */
+.home-footer-nav .nav-dropdown-toggle {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--nav-gray);
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.home-footer-nav .nav-dropdown-toggle:hover { opacity: 0.6; }
+
+/* ════════════════════════════════════
    ART PAGE BODY
 ════════════════════════════════════ */
 
@@ -189,20 +282,6 @@ body {
   color: var(--tan);
   padding: 18px 0 28px;
   transform: scaleX(1.5);
-}
-
-.breadcrumb-link {
-  color: inherit;
-  text-decoration: none;
-  opacity: 0.55;
-  transition: opacity 0.2s;
-}
-
-.breadcrumb-link:hover { opacity: 1; }
-
-.breadcrumb-bullet {
-  margin: 0 0.4em;
-  opacity: 0.4;
 }
 
 /* ════════════════════════════════════
@@ -601,7 +680,8 @@ body {
     gap: 14px;
   }
 
-  .site-nav .nav-links li a {
+  .site-nav .nav-links li a,
+  .site-nav .nav-links li .nav-dropdown-toggle {
     padding: 4px 12px;
     font-size: 9px;
     letter-spacing: 0.4em;

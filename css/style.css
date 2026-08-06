@@ -488,18 +488,21 @@ body {
   font-size: 14px;
   letter-spacing: 0.02em;
   margin-bottom: 4px;
+  text-transform: uppercase;
 }
 
 .commission-meta {
   font-size: 10px;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-style: italic;
   color: var(--nav-gray);
   line-height: 1.6;
   margin-bottom: 12px;
 }
 
 .commission-quote {
+  font-size: 10px;
+  letter-spacing: 0.1em;
   line-height: 1.75;
   color: var(--caption-dark);
   margin-bottom: 10px;

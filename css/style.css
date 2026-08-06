@@ -456,7 +456,7 @@ body {
 .commission-item {
   display: flex;
   gap: 26px;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .commission-thumb {
@@ -480,30 +480,32 @@ body {
 .commission-text {
   flex: 1;
   padding-top: 4px;
+  padding-bottom: 36px;
 }
 
 .commission-title {
-  font-style: italic;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 14px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.16em;
+  line-height: 1.7;
   margin-bottom: 4px;
   text-transform: uppercase;
 }
 
 .commission-meta {
-  font-size: 10px;
+  font-weight: 300;
+  font-size: 12px;
   letter-spacing: 0.1em;
-  font-style: italic;
-  color: var(--nav-gray);
-  line-height: 1.6;
+  line-height: 1;
+  color: var(--caption-dark);
   margin-bottom: 12px;
 }
 
 .commission-quote {
-  font-size: 10px;
+  font-weight: 300;
+  font-size: 12px;
   letter-spacing: 0.1em;
-  line-height: 1.75;
+  line-height: 1;
   color: var(--caption-dark);
   margin-bottom: 10px;
 }
